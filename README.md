@@ -7,7 +7,9 @@ interacts with the state machine and MongoDB.
 ### Reqiurements
 
 [Aio-pika](https://aio-pika.readthedocs.io/en/latest/)
+
 [motor](https://github.com/mongodb/motor)
+
 [transitions](https://github.com/pytransitions/transitions)
 
 
