@@ -31,3 +31,6 @@ docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 -p 5672:5672
 #### Service
 1. docker build --rm --network host -f ./Dockerfile -t rabbit_service:latest .
 2. docker run --network=host --hostname=rabbit_service -d --name=rabbit_service -e "RABBIT_SETTINGS=amqp://guest:guest@localhost:5672/" rabbit_service:latest
+
+
+docker run -d --hostname my-mongo --name some-mongo -p 27017:27017 mongo:latest

@@ -111,6 +111,8 @@ async def update_state(user: str, trigger: str) -> tuple[str, int]:
         Current state from FMS; Flag:
         0 for command start, 1 for callbacks, 2 for command hist
     """
+    # current_fsm_state - in this order detail status to write to the database.
+    # The next one goes to the final
     current_fsm, current_fsm_state = await get_or_create_fsm(user)
     try:
         await current_fsm.dispatch(trigger)
